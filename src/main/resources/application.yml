@@ -1,0 +1,38 @@
+server:
+  port: 8040
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mobil_user
+    username: postgres
+    password: Emre123!
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  # MSSQL Bağlantısı (İleride ihtiyacın olursa)
+  datasource-mssql:
+    url: jdbc:sqlserver://localhost:1433;databaseName=bank_gateway_test
+    username: sa
+    password: Emre123!
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  data:
+    user:
+      name: Testname
+      surname: Testsurname
+      password: 606060
+      custom: tauto123
+      otp_code: 123456
+
+springdoc:
+  api-docs:
+    path: /actuator/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
